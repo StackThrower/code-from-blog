@@ -16,6 +16,16 @@ public class ComparingStringsInJava {
         System.out.println("oneString.equals(twoString):" + oneString.equals(twoString));
     }
 
+    void compareByCompareTo() {
+        String oneString="Stack Throw";
+        String twoString="Stack Throw";
+        String threeString="Stack Overflow";
+
+        System.out.println(oneString.compareTo(twoString)); // 0
+        System.out.println(oneString.compareTo(threeString)); // -1 (because s1 < s3)
+        System.out.println(threeString.compareTo(oneString)); // 1 (because s3 > s1 )
+    }
+
     void compareByOperator() {
         String oneString = "Stack Throw";
         String twoString = new String("Stack Throw");
@@ -32,6 +42,7 @@ public class ComparingStringsInJava {
         obj.compareByObjectsClass();
         obj.compareByOperator();
         obj.compareByEquals();
+        obj.compareByCompareTo();
 
     }
 
